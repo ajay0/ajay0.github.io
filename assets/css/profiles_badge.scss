@@ -1,0 +1,16 @@
+---
+---
+
+#badges {
+  a {
+    text-decoration: none;
+    
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+    
+    svg {
+      padding: 10px;
+    }
+  }
+}

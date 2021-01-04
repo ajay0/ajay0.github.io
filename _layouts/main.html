@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajay Krishna</title>
+    <meta charset="utf-8">
+    <meta name="description" content="My home on the web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    {% for file in page.css_files %}
+    <link rel="stylesheet" href="/assets/css/{{ file }}">
+    {% endfor %}
+    {% for file in layout.css_files %}
+    <link rel="stylesheet" href="/assets/css/{{ file }}">
+    {% endfor %}
+    
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128967805-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-128967805-1');
+    </script>
+  </head>
+
+  <body>
+    <div id="nav-bar-wrapper">
+      {% include nav_bar.html %}
+    </div>
+    
+    <div id="nav-content-separator"></div>
+    
+    <div id="content-wrapper">
+      {{ content }}
+    </div>
+    
+    {% for file in page.js_files %}
+      <script src="/assets/js/{{ file }}"></script>
+    {% endfor %}
+  </body>
+</html>

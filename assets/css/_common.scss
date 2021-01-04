@@ -1,0 +1,26 @@
+$threshold-width: 640px;
+
+$small: 0.9rem;
+$medium: 1.1rem;
+$large: 1.2rem;
+$xlarge: 1.4rem;
+$xxlarge: 2rem;
+
+$name-font-weight: 400;
+
+@mixin content-margin {
+  @media (max-width: $threshold-width) {
+    margin: 0% 5%;
+  }
+  @media (min-width: $threshold-width) {
+    margin: 0% 14%;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500');
+
+@mixin content-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: $medium;
+  font-weight: 300;
+}

@@ -1,0 +1,82 @@
+---
+---
+
+@import 'common';
+
+#posts-container {
+  display: flex;
+  margin: 0% 2%;
+  
+  @media (min-width: $threshold-width) {
+    justify-content: space-between;
+  }
+  @media (max-width: $threshold-width) {
+    flex-direction: column-reverse;
+  }
+
+  #posts {
+    flex: 0.7;
+
+    #posts-list {
+      .post-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        border-bottom:  0.5px solid rgb(209, 209, 209);
+        padding: 5% 2%;
+
+        &:hover {
+          div {
+            border-bottom: 0.5px solid black;
+          }
+        }
+
+        .post-title {
+          font-weight: 400;
+          font-size: $xlarge;
+        }
+
+        .post-date {
+          font-size: $small;
+        }
+      }
+    }
+  }
+
+  #categories-large-viewport {
+    @media (max-width: $threshold-width) {
+      display: none;
+    }
+
+    flex: 0.22;
+
+    #categories-heading {
+      font-size: $large;
+    }
+
+    #categories-list {
+      list-style: none;
+      padding: 0px;
+      
+      .category-item {
+        cursor: pointer;
+        padding: 4% 0% 4% 8%;
+        border-left: 1px solid black;
+        font-size: $medium;
+
+        &:hover {
+          border-left: 4px solid black;
+        }
+      }
+    }
+  }
+
+  #categories-small-viewport {
+    margin: 10% 0%;
+    @media (min-width: $threshold-width) {
+      display: none;
+    }
+  }
+}

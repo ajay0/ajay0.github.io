@@ -1,0 +1,17 @@
+---
+layout: main
+css_files: post.css
+---
+
+<div id="post-container">
+  <p id="post-title">{{ page.title }}</p>
+  <div id="post-metadata">
+    <p id="post-date">{{ page.date | date: "%e-%b-%Y"}}</p>
+    <div id="date-category-separator"></div>
+    <p id="post-category">{{ page.category }}</p>
+  </div>
+
+  <div id="post-content">
+    {{ content }}
+  </div>
+</div>

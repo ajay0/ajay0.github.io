@@ -1,0 +1,15 @@
+<div id="nav-bar">
+  <div id="name">
+    <p>Ajay Krishna</p>
+  </div>
+
+  <div id="links">
+    {% for item in site.data.navigation %}
+    <div class="nav-link-wrapper">
+      <a href="{{ item.link }}" class="nav-link">
+        {{ item.page_name }}
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>

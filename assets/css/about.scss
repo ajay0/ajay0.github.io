@@ -1,0 +1,14 @@
+---
+---
+
+@import 'common';
+
+#about-container {
+  @include content-margin();
+    @media (max-width: $threshold-width) {
+      margin-top: 12%;
+    }
+  p {
+    @include content-font();
+  }
+}
